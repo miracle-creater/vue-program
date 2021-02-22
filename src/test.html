@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      div {
+        height: 200px;
+        background-image: linear-gradient(
+          to right,
+          cyan 0,
+          yellow 33%,
+          magenta 66%,
+          cyan 100%
+        );
+        font-size: 7rem;
+        background-clip: text;
+        background-size: contain;
+        background-position: top left;
+        background-repeat: repeat-x;
+        color: #ffffff00;
+        font-weight: bold;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>
+        你知道个屁
+      </span>
+    </div>
+    <script>
+      function* infiniteNumbers() {
+        var n = 1
+        while (true) {
+          yield n++
+        }
+      }
+
+      var numbers = infiniteNumbers() // returns an iterable object
+
+      console.log(infiniteNumbers())  // { value: 1, done: false }
+      numbers.next() // { value: 2, done: false }
+      console.log(numbers.next())  // { value: 1, done: false }
+      console.log(numbers.next())  // { value: 1, done: false }
+      console.log(numbers.next())  // { value: 1, done: false }
+      console.log(numbers.next())  // { value: 1, done: false }
+      console.log(numbers.next())  // { value: 1, done: false }
+      console.log(numbers.next())  // { value: 1, done: false }
+      console.log(numbers.next())  // { value: 1, done: false }
+      console.log(numbers.next())  // { value: 1, done: false }
+      console.log(numbers.next())  // { value: 1, done: false }
+      console.log(numbers.next())  // { value: 1, done: false }
+      console.log(numbers.next())  // { value: 1, done: false }
+      numbers.next() // { value: 3, done: false }
+    </script>
+  </body>
+</html>
